@@ -1,4 +1,3 @@
-  
 var http = require("http");
 
 var express = require("express");
@@ -14,7 +13,9 @@ apiServer.get("/nome", (req, res) =>{
     console.log("ho ricevuto una get su nome");
     res.send("ciao, il nome del server è: NODEPOGLIANI");
 });
-
+apiServer.get("/somma", (rew, res)=> {
+console.log("richiesta: " , req.query);
+});
 apiServer.get("/", function(req, res){
     res.send("sei in home");
-})
+});
